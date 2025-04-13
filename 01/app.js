@@ -1,11 +1,8 @@
 console.log("DOM");
-const elCommentsItems = document.querySelectorAll(
-  ".comments__item, .comments__item--newest"
+const elCommentsItem = document.querySelector(
+  ".comments__item.comments__item--newest"
 );
-if (elCommentsItems) {
-  console.log(elCommentsItems);
-  // const elementsDataInfo = Array.from(elCommentsItems).filter((el) =>
-  //   el.hasAttribute("data-info")
-  // );
-  // console.log(`There are ${elementsDataInfo.length}`);
+if (elCommentsItem) {
+  const dataInfoElements = elCommentsItem.querySelectorAll("[data-info]");
+  console.log(`There are ${dataInfoElements.length} emelents.`);
 }
