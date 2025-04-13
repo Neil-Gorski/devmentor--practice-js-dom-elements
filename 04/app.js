@@ -7,15 +7,15 @@ const menuItems = [
   { text: "kontakt", url: "/contact" },
 ];
 
-const nav = document.querySelector("nav");
-const uList = document.createElement("ul");
-nav.appendChild(uList);
+const navSection = document.querySelector("nav");
+const unorderdList = document.createElement("ul");
+navSection.appendChild(unorderdList);
 
 for (let i = 0; i < menuItems.length; i++) {
-  const lItem = document.createElement("li");
-  const aItem = document.createElement("a");
-  lItem.appendChild(aItem);
-  aItem.href = menuItems[i].url;
-  aItem.innerText = menuItems[i].text;
-  uList.appendChild(lItem);
+  const listItem = document.createElement("li");
+  const ancherTag = document.createElement("a");
+  listItem.appendChild(ancherTag);
+  ancherTag.href = menuItems[i].url;
+  ancherTag.innerText = menuItems[i].text;
+  unorderdList.appendChild(listItem);
 }
