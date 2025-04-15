@@ -17,3 +17,10 @@ curr.parentElement.nextElementSibling.setAttribute(
   "title",
   "nextElementSibling"
 );
+// 4.
+const lastArticle = curr.parentElement.parentElement.lastElementChild;
+console.log(lastArticle);
+const lastArticleBtn = lastArticle.querySelector("button");
+const newP = document.createElement("p");
+newP.innerText = "---> New text was added with JavaScript right here <---";
+lastArticle.insertBefore(newP, lastArticleBtn);
