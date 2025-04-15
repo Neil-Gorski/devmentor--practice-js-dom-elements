@@ -24,3 +24,44 @@ const lastArticleBtn = lastArticle.querySelector("button");
 const newP = document.createElement("p");
 newP.innerText = "---> New text was added with JavaScript right here <---";
 lastArticle.insertBefore(newP, lastArticleBtn);
+
+// 5.
+
+const articleData = {
+  article: {
+    element: "article",
+    classList: ["articles__item", "article"],
+    text: "",
+  },
+  header: {
+    element: "h1",
+    classList: ["article__title"],
+    text: "JS - Fist Article",
+  },
+  paragrph: {
+    element: "p",
+    classList: ["article__description"],
+    text: "JS - Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quo quibusdam, nemo neque consequuntur pariatur totam? Facere quaerat molestias hic.",
+  },
+  button: {
+    element: "button",
+    classList: ["article__btn"],
+    text: "JS - Kupuję!",
+  },
+};
+
+const sectionArticles = curr.parentElement.parentElement;
+const newArticle = createElement(articleData.article);
+sectionArticles.insertBefore(newArticle, sectionArticles.firstChild);
+newArticle.appendChild(createElement(articleData.header));
+newArticle.appendChild(createElement(articleData.paragrph));
+newArticle.appendChild(createElement(articleData.button));
+
+function createElement(obj) {
+  const element = document.createElement(obj.element);
+  for (classElement in obj.classList) {
+    element.classList.add(classElement);
+  }
+  element.innerText = obj.text;
+  return element;
+}
